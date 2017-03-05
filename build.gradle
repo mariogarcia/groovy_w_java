@@ -1,0 +1,37 @@
+/*
+ * ###################
+ * #### LIBRARIES ####
+ * ###################
+ */
+ext.libs = [
+    spock: 'org.spockframework:spock-core:1.0-groovy-2.4',
+    junit: 'junit:junit:4.12',
+    slf4j_simple: 'org.slf4j:slf4j-simple:1.7.21',
+    sparkjava: 'com.sparkjava:spark-core:2.5.5',
+    snakeyaml: 'org.yaml:snakeyaml:1.18',
+    asteroid: 'com.github.grooviter:asteroid:0.2.3',
+    groovyAll: 'org.codehaus.groovy:groovy-all:2.4.7'
+]
+
+/*
+ * ########################
+ * ### DEPENDECY GROUPS ###
+ * ########################
+ */
+ext.groups = [
+    testing: [libs.spock, libs.junit]
+]
+
+/*
+ * ###############################
+ * ### APPLY TO ALL SUBMODULES ###
+ * ###############################
+ */
+project.subprojects {
+    repositories {
+        jcenter()
+        maven {
+            url  "http://dl.bintray.com/grooviter/maven"
+        }
+    }
+}

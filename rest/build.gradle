@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+dependencies {
+    compile project(':logic')
+
+    compile libs.sparkjava
+    compile libs.slf4j_simple
+
+    testCompile groups.testing
+}
+
+/*
+ * This variable points at your application main entry point.
+ * Once is set, You can run the application executing:
+ *
+ * ./gradlew :rest:run
+ *
+ */
+mainClassName = 'ms.rest.Measurements'

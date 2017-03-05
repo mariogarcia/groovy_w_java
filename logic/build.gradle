@@ -1,0 +1,10 @@
+apply plugin: 'groovy'
+
+dependencies {
+    compile project(':tools')
+
+    compile libs.groovyAll
+    compile libs.slf4j_simple
+
+    testCompile groups.testing
+}

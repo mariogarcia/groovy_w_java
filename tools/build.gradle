@@ -1,0 +1,9 @@
+apply plugin: 'groovy'
+
+dependencies {
+    compile libs.snakeyaml
+    compile libs.asteroid
+    compile libs.groovyAll
+
+    testCompile groups.testing
+}
